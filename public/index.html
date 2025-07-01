@@ -193,6 +193,51 @@ button:active {
   box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 
+/* 共通：おしゃれなフラットボタンの基本スタイル */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 18px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  color: #333;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+button:active {
+  transform: scale(0.96);
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* クイズスタートボタン（青系） */
+#startBtn {
+  background: linear-gradient(145deg, #4a90e2, #357bd8);
+  color: #fff;
+}
+
+/* 次へボタン（緑系） */
+#nextBtn {
+  background: linear-gradient(145deg, #43a047, #388e3c);
+  color: #fff;
+  display: none;
+}
+
+/* 〇×ボタン（明るめグレー） */
+.choice {
+  background: linear-gradient(145deg, #fafafa, #dddddd);
+  color: #333;
+  font-size: 22px;
+  padding: 10px 30px;
+  margin: 10px;
+}
 
 
     @media (max-width: 480px) {
@@ -261,19 +306,19 @@ button:active {
 <script>
 const questions = [
   {
-    text: "空は青い？",
-    answer: true,
-    explanation: "大気中の光の散乱により、空は青く見えます。"
-  },
-  {
-    text: "2+2=5である。",
+    text: "平成28年に学校教育法等の一部改正（事務に「従事する」→ 事務を「つかさどる」）された？",
     answer: false,
-    explanation: "2+2=4が正しい答えです。"
+    explanation: "改正されたのは、平成29年です！"
   },
   {
-    text: "日本の首都は東京？",
-    answer: true,
-    explanation: "日本の首都は東京都です。"
+    text: "平成29年の12月における中央教育審議会で「部活動」は「基本的には学校以外が担うべき業務」と示された？",
+    answer: false,
+    explanation: "「部活動」は、「学校の業務だが、必ずしも教師が担う必要のない業務」と示されました！"
+  },
+  {
+    text: "今回の大会テーマは「学校・家庭・地域、次代へつなぐ学校事務の創生」である？",
+    answer: false,
+    explanation: "今回の大会テーマは「学校・家庭・地域、次代へつなげる学校事務の創造」です！"
   }
 ];
 
